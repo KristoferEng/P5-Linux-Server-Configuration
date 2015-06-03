@@ -1,6 +1,7 @@
 # P5-Linux-Server-Configuration
 
 What is it?
+
 The Linux Server Configuration Project is the fifth project in the Udacity Full Stack Nanodegree. The goal was to fully configure the server to host the Item Catalog Application.
 
 To access the website running the Item Catalog application please visit: http://www.slikqaz.tk/
