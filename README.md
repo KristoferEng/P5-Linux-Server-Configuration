@@ -26,7 +26,7 @@ Oatuh2 - install oauth2
 
 
 
-# Additional Installs (For reference for myself)
-# apt-get install python-sqlalchemy
-# pip install oauth2
-# pip install --upgrade oauth2client
+Additional Installs (For reference for myself)
+apt-get install python-sqlalchemy
+pip install oauth2
+pip install --upgrade oauth2client
