@@ -12,6 +12,7 @@ Be sure to include the RSA key in the submission note at ~/.ssh/udacity_key.rsa.
 # Configuration
 ## 1. Launch your Virtual Machine with your Udacity account
 - Create development environment from https://www.udacity.com/account#!/development_environment
+
 ## 2. Follow the instructions provided to SSH into your server
 - Download private key
 - In terminal, mv ~/Downloads/udacity_key.rsa ~/.ssh/
