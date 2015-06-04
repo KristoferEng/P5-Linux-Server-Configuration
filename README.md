@@ -119,17 +119,3 @@ Flask App Config - https://www.digitalocean.com/community/tutorials/how-to-deplo
                 LogLevel warn
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
   </VirtualHost>
-
-
-
-
-
-
-
-
-
-
-Additional Installs (For reference for myself)
-apt-get install python-sqlalchemy
-pip install oauth2
-pip install --upgrade oauth2client
