@@ -25,30 +25,39 @@ Be sure to include the RSA key in the submission note at ~/.ssh/udacity_key.rsa.
 
 #### 4. Give the grader the permission to sudo
 - In ssh terminal, adduser grader sudo
+
 #### 5. Update all currently installed packages
 - For list of packages: in ssh terminal, apt-get update
 - To update: in ssh terminal, sudo apt-get upgrade
+
 #### 6. Change the SSH port from 22 to 2200
 - In ssh terminal, nano /etc/ssh/sshd_config
 - Change port 22 to 2200
+
 #### 7. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
 - In ssh terminal, ufw allow 2200/ssh
 - In ssh terminal, ufw allow 80/http
 - In ssh terminal, ufw allow 123/ntp
+
 #### 8. Configure the local timezone to UTC
 - In ssh terminal, dpkg-reconfigure tzdata
+
 #### 9. Install and configure Apache to serve a Python mod_wsgi application
 - In ssh terminal, apt-get install apache2
 - In ssh terminal, apt-get install python-setuptools libapache2-mod-wsgi
+
 #### 10. Install and configure PostgreSQL:
 - In ssh terminal, apt-get install postgresql
 - In ssh terminal, su - postgres
 - In ssh terminal, psql
 - In ssh terminal, create database catalog
+
 #### 10.a Do not allow remote connections
 - Postgres does this by default
+
 #### 10.b Create a new user named catalog that has limited permissions to your catalog application database
 - In ssh terminal, create user catalog -l
+
 #### 11. Install git, clone and setup your Catalog App project (from your GitHub repository from earlier in the Nanodegree program) so that it functions correctly when visiting your server’s IP address in a browser. Remember to set this up appropriately so that your .git directory is not publicly accessible via a browser!
 - Set up file structure with the following:
   /var/www/catalog/catalog where the second catalog is where the catalog app files go
@@ -65,6 +74,7 @@ Be sure to include the RSA key in the submission note at ~/.ssh/udacity_key.rsa.
 - In ssh terminal, a2ensite catalog
 - In ssh terminal, service apache2 restart
 - In browser, the website should show up on your domain at this point.
+
 #### 12. Enable SSH for grader.
 - In ssh terminal, su - grader
 - In ssh terminal, mkdir .ssh
@@ -72,15 +82,13 @@ Be sure to include the RSA key in the submission note at ~/.ssh/udacity_key.rsa.
 - In ssh terminal, touch .ssh/authorized_keys
 - In ssh terminal, chmod 600 .ssh/authorized_keys
 - In ssh terminal, take the public key from the root in authorized_keys and place it in the grader's authorized_keys
+
 #### 13. SSH into grader
 - In terminal, ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.11.160.171
 
-
-Resources
+#Resources
 LAMP - http://blog.udacity.com/2015/03/step-by-step-guide-install-lamp-linux-apache-mysql-python-ubuntu.html
 Flask App Config - https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
-SQL Alchemy - pip install SQLAlchemy
-Oatuh2 - install oauth2
 
 # Catalog.wsgi
   #!/usr/bin/python
@@ -110,7 +118,7 @@ Oatuh2 - install oauth2
                 ErrorLog ${APACHE_LOG_DIR}/error.log
                 LogLevel warn
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+  </VirtualHost>
 
 
 
