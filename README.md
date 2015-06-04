@@ -10,15 +10,13 @@ To ssh access the server, use the following: ssh -i ~/.ssh/udacity_key.rsa -p 22
 Be sure to include the RSA key in the submission note at ~/.ssh/udacity_key.rsa.
 
 # Configuration
-1. Launch your Virtual Machine with your Udacity account
+# 1. Launch your Virtual Machine with your Udacity account
 - Create development environment from https://www.udacity.com/account#!/development_environment
-
-2. Follow the instructions provided to SSH into your server
+# 2. Follow the instructions provided to SSH into your server
 - Download private key
 - In terminal, mv ~/Downloads/udacity_key.rsa ~/.ssh/
 - In terminal, chmod 600 ~/.ssh/udacity_key.rsa
 - Log into SSH using ssh -i ~/.ssh/udacity_key.rsa -p 2200 root@52.11.160.171
-
 3. Create a new user named grader
 - In ssh terminal, adduser grader
 - Set password
