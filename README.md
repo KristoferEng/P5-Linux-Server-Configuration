@@ -86,6 +86,11 @@ Be sure to include the RSA key in the submission note at ~/.ssh/udacity_key.rsa.
 #### 13. SSH into grader
 - In terminal, ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.11.160.171
 
+#### 14. Auto updates
+- In ssh terminal, apt-get install unattended-upgrades
+- In ssh terminal, update /etc/apt/apt.conf.d/50unattended-upgrades
+- In ssh terminal, set /etc/apt/apt.conf.d/10periodic to appropriate update schedule
+
 #Resources
 LAMP - http://blog.udacity.com/2015/03/step-by-step-guide-install-lamp-linux-apache-mysql-python-ubuntu.html
 Flask App Config - https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
